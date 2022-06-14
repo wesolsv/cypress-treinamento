@@ -1,0 +1,26 @@
+{
+  "name": "cypress-primeiro-projeto",
+  "version": "1.0.0",
+  "description": "Projeto Cypress Treinamento",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wesolsv/cypress-treinamento.git"
+  },
+  "keywords": [
+    "cypress",
+    "treinamento"
+  ],
+  "author": "Wesley Oliveira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wesolsv/cypress-treinamento/issues"
+  },
+  "homepage": "https://github.com/wesolsv/cypress-treinamento#readme",
+  "devDependencies": {
+    "cypress": "^10.1.0"
+  }
+}
