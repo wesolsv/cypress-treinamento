@@ -12,4 +12,28 @@ describe('Busca de dados', () => {
         });
     })
 
+    it('login-usuario-flavio', () => {
+        cy.request({
+            method: "POST",
+            url: "https://apialurapic.herokuapp.com/user/login",
+            body: {userName: "flavio", password: "123"}
+        }).then((res) => {
+            expect(res.status).to.be.equal(200);
+            expect(res.body).is.not.empty;
+        });
+    })
+
+    it.only('login-credenciais-incorretas', () => {
+        cy.request({
+            method: "POST",
+            url: "https://apialurapic.herokuapp.com/user/login",
+            body: {userName: "flavio", password: "1234"},
+            failOnStatusCode: false
+        }).then((res) => {
+            expect(res.status).to.be.equal(401);
+            expect(res.body).is.not.empty;
+            expect(res.body.message).to.be.equal('Authentication failed for user flavio');
+        });
+    })
+
 })
