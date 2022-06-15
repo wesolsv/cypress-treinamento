@@ -12,7 +12,7 @@ describe('Busca de dados', () => {
         });
     })
 
-    it.only('login-usuario-flavio', () => {
+    it('login-usuario-flavio', () => {
         cy.request({
             method: "POST",
             url: "https://apialurapic.herokuapp.com/user/login",
