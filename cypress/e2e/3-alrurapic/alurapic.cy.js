@@ -45,7 +45,7 @@ describe('Login e registro de usuario', () => {
         cy.contains('ap-vmessage', 'Mininum length is 8').should('be.visible');
     })
 
-    it('login-usuario-valido', () =>{
+    it.only('login-usuario-valido', () =>{
         cy.login('flavio', '123');
         cy.contains('a', '(Logout)').should('be.visible');
     })
@@ -59,7 +59,7 @@ describe('Login e registro de usuario', () => {
 
     usuarios.forEach(usuario => {
 
-        it.only(`cadastra-usuario ${usuario.userName}`, () => {
+        it(`cadastra-usuario ${usuario.userName}`, () => {
             cy.contains('a', 'Register now').click();
             cy.contains('button', 'Register').click();
             cy.get('input[formcontrolname="email"]').type(usuario.email);

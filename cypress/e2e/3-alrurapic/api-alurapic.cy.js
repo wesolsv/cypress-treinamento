@@ -12,18 +12,18 @@ describe('Busca de dados', () => {
         });
     })
 
-    it('login-usuario-flavio', () => {
+    it.only('login-usuario-flavio', () => {
         cy.request({
             method: "POST",
             url: "https://apialurapic.herokuapp.com/user/login",
-            body: {userName: "flavio", password: "123"}
+            body: Cypress.env()
         }).then((res) => {
             expect(res.status).to.be.equal(200);
             expect(res.body).is.not.empty;
         });
     })
 
-    it.only('login-credenciais-incorretas', () => {
+    it('login-credenciais-incorretas', () => {
         cy.request({
             method: "POST",
             url: "https://apialurapic.herokuapp.com/user/login",
