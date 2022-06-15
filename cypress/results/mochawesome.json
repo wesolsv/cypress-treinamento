@@ -1,0 +1,200 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-06-15T03:50:23.957Z",
+    "end": "2022-06-15T03:50:34.812Z",
+    "duration": 10855,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8eec78bc-8d55-4472-bcae-2bb921439ded",
+      "title": "",
+      "fullFile": "cypress\\e2e\\3-alrurapic\\alurapic.cy.js",
+      "file": "cypress\\e2e\\3-alrurapic\\alurapic.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c9a2d645-a2be-4888-b1c8-2c7c25763b4c",
+          "title": "Login e registro de usuario",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "mensagens-validacao",
+              "fullTitle": "Login e registro de usuario mensagens-validacao",
+              "timedOut": null,
+              "duration": 2228,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.contains('button', 'Register').click();\ncy.contains('ap-vmessage', 'Email is required!').should('be.visible');\ncy.contains('button', 'Register').click();\ncy.contains('ap-vmessage', 'Full name is required!').should('be.visible');\ncy.contains('ap-vmessage', 'User name is required!').should('be.visible');\ncy.contains('ap-vmessage', 'Password is required!').should('be.visible');",
+              "err": {},
+              "uuid": "95666f9c-70e7-429b-9c5d-1d9c1738b8ae",
+              "parentUUID": "c9a2d645-a2be-4888-b1c8-2c7c25763b4c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "email-invalido",
+              "fullTitle": "Login e registro de usuario email-invalido",
+              "timedOut": null,
+              "duration": 1121,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.get('input[formcontrolname=\"email\"]').type('wesley').blur();\ncy.contains('ap-vmessage', 'Invalid e-mail').should('be.visible');",
+              "err": {},
+              "uuid": "44e7f834-865b-406e-9de2-7edd0c0ce254",
+              "parentUUID": "c9a2d645-a2be-4888-b1c8-2c7c25763b4c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "tamanho-campo-name",
+              "fullTitle": "Login e registro de usuario tamanho-campo-name",
+              "timedOut": null,
+              "duration": 931,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.get('input[formcontrolname=\"fullName\"]').type('Y').blur();\ncy.contains('ap-vmessage', 'Mininum length is 2').should('be.visible');",
+              "err": {},
+              "uuid": "7e60046b-1233-4497-bacd-d275b711abcb",
+              "parentUUID": "c9a2d645-a2be-4888-b1c8-2c7c25763b4c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "usuario-minusculo",
+              "fullTitle": "Login e registro de usuario usuario-minusculo",
+              "timedOut": null,
+              "duration": 1007,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.get('input[formcontrolname=\"userName\"]').type('MAIUSCULO').blur();\ncy.contains('ap-vmessage', 'Must be lower case').should('be.visible');",
+              "err": {},
+              "uuid": "f5dd09a0-2934-423f-a7e9-00fac7857f93",
+              "parentUUID": "c9a2d645-a2be-4888-b1c8-2c7c25763b4c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "usuario-repetido",
+              "fullTitle": "Login e registro de usuario usuario-repetido",
+              "timedOut": null,
+              "duration": 2418,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.get('input[formcontrolname=\"userName\"]').type('flavio').blur();\ncy.contains('ap-vmessage', 'Username already take').should('be.visible');",
+              "err": {},
+              "uuid": "6638e910-a035-4f5f-a5ad-19be625616f1",
+              "parentUUID": "c9a2d645-a2be-4888-b1c8-2c7c25763b4c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "tamanho-minimo-senha",
+              "fullTitle": "Login e registro de usuario tamanho-minimo-senha",
+              "timedOut": null,
+              "duration": 944,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.contains('a', 'Register now').click();\ncy.get('input[formcontrolname=\"password\"]').type('1234').blur();\ncy.contains('ap-vmessage', 'Mininum length is 8').should('be.visible');",
+              "err": {},
+              "uuid": "42f2ec52-2cb6-4be7-b185-7fc0c93dcb3c",
+              "parentUUID": "c9a2d645-a2be-4888-b1c8-2c7c25763b4c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "95666f9c-70e7-429b-9c5d-1d9c1738b8ae",
+            "44e7f834-865b-406e-9de2-7edd0c0ce254",
+            "7e60046b-1233-4497-bacd-d275b711abcb",
+            "f5dd09a0-2934-423f-a7e9-00fac7857f93",
+            "6638e910-a035-4f5f-a5ad-19be625616f1",
+            "42f2ec52-2cb6-4be7-b185-7fc0c93dcb3c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 8649,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

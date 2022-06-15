@@ -21,6 +21,11 @@
   },
   "homepage": "https://github.com/wesolsv/cypress-treinamento#readme",
   "devDependencies": {
-    "cypress": "^10.1.0"
+    "cypress": "^10.1.0",
+    "mocha": "^10.0.0",
+    "mocha-multi-reporters": "^1.5.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.1",
+    "mochawesome-report-generator": "^6.2.0"
   }
 }
