@@ -1,0 +1,20 @@
+[
+    {
+        "email": "morty.sanchez@alura.com",
+        "fullName": "Morty Sanchez",
+        "userName": "morty",
+        "password": "evilmorty"
+    },
+    {
+        "email": "leia.organa@alura.com",
+        "fullName": "Leia Organa",
+        "userName": "leia",
+        "password": "general"
+    },
+    {
+        "email": "rick.sanchez@alura.com",
+        "fullName": "Rick Sanchez",
+        "userName": "rick",
+        "password": "wabalabadubdub"
+    }
+]
