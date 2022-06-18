@@ -1,6 +1,6 @@
 describe('Registro de usuario', () => {
     beforeEach(() => {
-        cy.visit('https://alura-fotos.herokuapp.com/');
+        cy.visit('/');
         cy.contains('a', 'Register now').click();
     })
 

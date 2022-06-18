@@ -1,6 +1,6 @@
 describe('Funcionalidades gerais tela inicial', () => {
     beforeEach(() => {
-        cy.visit('https://alura-fotos.herokuapp.com/');
+        cy.visit('/');
     })
 
     //arrange, act, accept
